@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import BookContext from '../context/BookContext';
+import './BookCreate.scss';
 
 const BookCreate = () => {
     const [title, setTitle] = useState('');
@@ -13,7 +14,7 @@ const BookCreate = () => {
 
     const handleOnChange = (e) => {
         setTitle(e.target.value);
-    }
+    };
 
     return <div className="book-create">
         <form onSubmit={handleOnSubmit}>

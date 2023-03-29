@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useCallback, useState } from 'react';
 import axios from 'axios';
 import config from '../environment/environment.dev';
 
@@ -7,17 +7,15 @@ const BookContext = createContext(null);
 const Provider = ({ children }) => {
     const [books, setBooks] = useState([]);
 
-    const fetchBooks = async () => {
+    const fetchBooks = useCallback(async () => {
         const res = await axios.get(config.db);
         setBooks(res.data);
-        console.log(res.data);
-    };
+    }, []);
 
     const createBook = async (title) => {
         const res = await axios.post(config.db, {
             title,
         });
-        console.log(res.data);
         setBooks([...books, res.data]);
     };
 

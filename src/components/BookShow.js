@@ -6,7 +6,7 @@ import BookEdit from './BookEdit';
 
 const BookShow = ({ book }) => {
     const [editMode, setEditMode] = useState(false);
-    const { deleteBook, editBook } = useContext(BookContext);
+    const { deleteBook } = useContext(BookContext);
 
     const handleDelete = () => {
         deleteBook(book.id);
@@ -17,19 +17,19 @@ const BookShow = ({ book }) => {
     };
 
     return (
-        (<div className="book">
-            {!editMode && <>
-                <div className="icons">
-                    <FiEdit onClick={handleEditMode}/>
-                    <AiOutlineDelete onClick={handleDelete}/>
-                </div>
+        <div className="book">
 
-                <img src={`https://picsum.photos/seed/${book.id}/200`}/>
-                <div>{book.id}. {book.title}</div>
-            </>}
+            <div className="icons">
+                <FiEdit className="pointer"
+                        onClick={handleEditMode}/>
+                <AiOutlineDelete className="pointer"
+                                 onClick={handleDelete}/>
+            </div>
 
-            {editMode && <BookEdit/>}
-        </div>)
+            <img src={`https://picsum.photos/seed/${book.id}/200`}/>
+            {editMode ? <BookEdit book={book}
+                                  handleEditMode={handleEditMode}/> : <div>{book.id}. {book.title}</div>}
+        </div>
     );
 };
 

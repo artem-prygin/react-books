@@ -1,0 +1,29 @@
+.book-create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: forestgreen;
+
+    button {
+        cursor: pointer;
+        padding: 10px;
+        margin-left: 10px;
+        outline: none;
+        background: white;
+        font-size: 16px;
+        margin-right: 10px;
+        border: none
+    }
+
+    input {
+        padding: 10px 5px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+}

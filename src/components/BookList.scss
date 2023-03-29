@@ -1,0 +1,17 @@
+.book {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ccc;
+
+    .icons {
+        position: absolute;
+        font-size: 20px;
+        right: 0;
+        top: 0;
+        background: #fff;
+
+        svg {
+            margin: 0 5px;
+        }
+    }
+}

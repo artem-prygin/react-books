@@ -7,14 +7,25 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 .d-flex {
     display: flex;
     flex-wrap: wrap;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }
 
 .book {
@@ -63,4 +74,9 @@ code {
     font-size: 16px;
     border: none;
     outline: none;
+}
+
+
+.book-edit input {
+    width: 130px;
 }
