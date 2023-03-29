@@ -1,13 +1,66 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+.book .icons {
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    background: #fff;
+}
+
+.book .icons svg {
+    margin: 0 5px;
+}
+
+.book-create {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: forestgreen;
+}
+
+.book-create button {
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    outline: none;
+    background: white;
+    font-size: 16px;
+    margin-right: 10px;
+    border: none
+}
+
+.book-create input {
+    padding: 10px 5px;
+    font-size: 16px;
+    border: none;
+    outline: none;
 }
